@@ -1,0 +1,17 @@
+step 0: open Files
+step 1: zero2D (zeroFramedAry)
+step 2: loadImage(inFile, zeroFramedAry)
+step 3: Connectnessßfrom argv[2]
+step 4: newLabelßconnectPass1 (Connectness, zeroFramedAry, NonZeroNeighborAry)
+step 5: prettyPrint (prettyPrintFile)
+printEQAry (newLable, prettyPrintFile)
+step 6: connectPass2 (Connectness, zeroFramedAry, NonZeroNeighborAry) step 7: prettyPrint (prettyPrintFile) // Print zeroFramedAry to prettyPrintFile
+printEQAry (newLable, prettyPrintFile) step 8: manageEQAry (EQAry, newLabel)
+printEQAry (numCCLable, prettyPrintFile) step 9: connectPass3 (...) // See algorithm below
+prettyPrint (prettyPrintFile) // Print zeroFramedAry to prettyPrintFile printEQAry (numCCLable, prettyPrintFile)
+print the EQAry up to numCCLabel with proper caption
+step 10: output numRows, numCols, newMin, newMax to labelFile
+step 11: printImg (labelFile) // Output the result of pass3 from zeroFramedAry to
+//labelFile,
+step 12: printCCproperty (propertyFile) // print cc properties to propertyFile step 13: drawBoxes(zeroFramedAry, CCproperty)
+step 14: prettyPrint (prettyPrintFile) // Print zeroFramedAry to prettyPrintFile step 15: close all files
