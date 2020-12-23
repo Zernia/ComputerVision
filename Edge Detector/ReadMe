@@ -1,0 +1,16 @@
+Algorithm Steps:
+step 0: open the image and read the image header
+step 1: loadImage (mirrorFramedAry)
+step 2: mirrowFramed (mirrorFramedAry)
+step 3: process the mirrorFramedAry, RobertRightDiag(i,j)ßabs(convoluteRobert (i,j,maskRobertRightDiag)) RobertLeftDiag(i,j)ßabs (convoluteRobert (i,j,maskRobertLeftDiag)) SobelRightDiag(i,j)ßabs(convoluteSobel (i,j, maskSobelRightDiag)) SobelLeftDiag(i,j)ßabs (convoluteSobel (i,j, maskSobelLeftDiag)) GradiantEdge(i,j) ß computeGradient(i,j)
+step 4: repeat step 3 until all pixels inside of the frame are processed. step 5: addTwoArys (RobertRightDiag, RobertLeftDiag, edgeSum) output RobertRightDiag to deBugOut file
+output RobertLeftDiag to deBugOut file
+output input image header to RobertEdgeOut file
+output edgeSum to RobertEdgeOut file
+step 6: addTwoArys (SobelRightDiag, SobelLeftDiag, edgeSum)
+output SobelRightDiag to deBugOut file
+output SobelLeftDiag to deBugOut file
+output input image header to SobelEdgeOut file
+output edgeSum to SobelEdgeOut file
+step 7: output input image header to GradiantEdgeOut file
+output GradiantEdge to GradiantEdgeOut file step 8: close all files
