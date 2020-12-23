@@ -1,0 +1,14 @@
+Algorithem steps:
+Step 1: labelFile <-- open label file from argv[1]
+propFile <-- open property file from argv[2]
+output image header to ChainCodeFile
+output image header to deBugFile // per text line
+imageAry <-- dynamically allocated
+loadImage (imageAry ) CCAry <-- dynamically allocated
+Step 2: CC <-- get the next connected component from the property file
+Step 3: CClabel <-- get the label of CC
+Step 4: clearCC ()
+Step 5: loadCC (CClabel, CCAry)
+Step 6: getChainCode (CC, CCAry)
+Step 7: repeat step 2 to step 5 until all connected components are processed.
+Step 8: close all files
