@@ -1,9 +1,5 @@
 //
 //  main.cpp
-//  Project11
-//
-//  Created by zerniaovo on 4/27/20.
-//  Copyright © 2020 zerniaovo. All rights reserved.
 //
 
 #include <iostream>
