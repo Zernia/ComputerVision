@@ -1,0 +1,21 @@
+step 0: inFile<-open from argv
+        outFile1, outFile2<-open from argv
+step 1:numRows, numCols, minVal, maxVal<-read from inFile
+       outFile1<-output numRows, numCols, minVal, maxVal to outFile1 
+       dynamically allocate firstAry of size numRows + 2 by numCols + 2.
+       dynamically allocate secondAry of size numRows + 2 by numCols + 2.
+step 2:zeroFrame(firstAry)
+       zeroFrame(secondAry)
+step 3:loadImage (inFile, firstAry)
+step 4:prettyPrint (firstAry, outFile2) // This print is before thinning 
+step 5:changeFlag<-0
+step 6:doThinning (firstAry, secondAry, changeFlag)
+Step 7:prettyPrint (firstAry, outFile2)
+Step 8:repeat step 5 to step 7 while changeFlag > 0
+step 9:outFile1<-output firstAry from [1][1] *without* extra rows and cols
+step 10: close all files
+
+
+
+
+
