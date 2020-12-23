@@ -1,0 +1,29 @@
+Algorithm steps: 
+
+step 0: inFile  args[0]
+        outFile1  args[1]
+	    outFile2  args[2]
+	    outFile3  args[3]
+	   	   
+step 1: numRows, numCols, minVal, maxVal  read from inFile
+step	2: offSet  (int) (maxVal - minVal) / 10  
+   thrVal offSet
+
+step	3: histAry  dynamically allocate and initialized to zero
+ 	  GaussAry  dynamically allocate and initialized to zero
+ 	 histGraph  dynamically allocate and initialized to zero
+  GaussGraph  dynamically allocate and initialized to zero
+  gapGraph  dynamically allocate and initialized to zero
+
+step	4: loadHist (histAry, inFile) 
+step	5: plotHistGraph (histGraph)	  
+		prettyPrint (histGraph, outFile1) // with caption	
+
+step 6: bestThrVal  biMeanGauss (thrVal) 
+	output bestThrVal to outFile1 // with caption 
+
+step 7: bestThrPlot (bestThrVal) // plotting the result of Gaussian curves  
+	prettyPrint(GaussGraph, outFile1)  // with caption
+
+step 8: prettyPrint(gapGraph, outFile1) // with caption
+step 9: close all files
