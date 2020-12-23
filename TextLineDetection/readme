@@ -1,0 +1,13 @@
+Algorithm Steps:
+Step 0: inFile<-open from argv[1]; threshold value<-argv[2];
+OutFile1<-open from argv[3]; OutFile2<-open from argv[4] Step 1: dynamically allocate all the Ary:
+imageAry[numRow+2][numCol+2], hpp, hppBin; hppMorph[numRow+2]; vpp, vppBin, vppMorph[numCols+2];
+Step 2: loadImage(inFile, imageAry);
+Step3: Compute HPP(imageAry, HPP) and Compute VPP(imageAry, VPP)
+Step4: print HPP and VPP Array to outFile2;
+Step5: changeThreshold(HPP, HPPBin) and changeThreshold(VPP, VPPBin)
+Step6:print HppBin and VppBin Ary to outFile2
+Step7:Do Morphology Closing on HPPBin and VPPBin Ary, get HPPMorph and VPPMorph
+Step8: Determine reading direction Step9: boundBoxLine();
+Step10: print box information to outFile2; Step11: draw the box
+Step12: close all the files
