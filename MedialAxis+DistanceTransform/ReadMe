@@ -1,0 +1,15 @@
+Algorithm steps:
+Step 0: inFile ß open input file
+numRows, numCols, minVal, maxVal ß read from inFile
+dynamically allocate zeroFramedAry with extra 2 rows and 2 cols dynamically allocate skeletonAry with extra 2 rows and 2 cols
+open outFile_1, outFile_2
+Step 1: skeletonFileName ß argv[1] + “_skeleton”
+Step 2: skeletonFile ß open ( skeletonFileName )
+Step 3: decompressedFileName ß argv[1] + “_decompressed”
+Step 4: decompressFile ß open (decompressedFileName)
+Step 5: setZero (zeroFramedAry) setZero (skeletonAry)
+Step 6: loadImage (inFile, zeroFramedAry)
+Step 7: compute8Distance (zeroFramedAry, outFile1)
+Step 8: skeletonExtraction (zeroFramedAry, skeletonAry, skeletonFile, outFile1) Step 9: skeletonExpansion (zeroFramedAry, skeletonFile, outFile2)
+Step 10: Output numRows, numCols, newMinVal, newMaxVal to decompressFile Step 11: ary2File (zeroFramedAry, decompressFile)
+Step 12: close all files
